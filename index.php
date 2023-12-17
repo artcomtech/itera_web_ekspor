@@ -42,6 +42,7 @@
   </section>
 
 
+  <!-- Untuk Menu Atas -->
   <header>
     <nav>
       <div id="mySidenav" class="sidenav">
@@ -72,7 +73,7 @@
 
 
 
-
+    <!-- Untuk Text SLider -->
   <section class="home">
     <div class="item">
       <div class="heading">
@@ -88,7 +89,7 @@
 
 
 
-
+  <!-- Halaman Category Product -->
   <section class="menu top">
     <div class="container">
       <div class="heading">
@@ -124,7 +125,7 @@
   <script src="js/owl.carousel.js" charset="utf-8"></script>
   <!-- Owl  Carouse js file  -->
 
-
+<!-- Untuk Slider Category Product -->
   <script>
     $('.owl-carousel').owlCarousel({
       loop: true,
@@ -145,6 +146,7 @@
     })
   </script>
 
+  <!-- Untuk About -->
   <?php
   $sql = "SELECT * FROM about";
   $about = mysqli_query($conn, $sql);
@@ -177,7 +179,7 @@
   </section>
 
 
-
+    <!-- Untuk Service -->
   <section class="list">
     <div class="container">
       <div class="grid">
@@ -203,7 +205,7 @@
       <h2>Take with You</h2>
       <p style="color: black;">All the products we provide are of the best quality and best standards. </p>
     </div>
-
+    <!-- Untuk Product -->
     <div class="content grid mtop">
       <?php
         $sql = "SELECT * FROM product";
