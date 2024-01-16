@@ -20,8 +20,8 @@
                     <tr>
                         <th>Title</th>
                         <th>Description</th>
-                        <th>Location</th>
-                        <th>Phone</th>
+                        <th>Visi</th>
+                        <th>Misi</th>
                         <th>#</th>
                     </tr>
                 </thead>
@@ -35,8 +35,8 @@
                                 <tr>
                                     <td>'.$row['title'].'</td>
                                     <td>'.$row['desc'].'</td>
-                                    <td>'.$row['location'].'</td>
-                                    <td>'.$row['phone'].'</td>
+                                    <td>'.$row['visi'].'</td>
+                                    <td>'.$row['misi'].'</td>
                                     <td><a href="?page=edit_about&id='.$row['id'].'"><button class="button-3">Edit</button></td>
                                 </tr>
                             ';

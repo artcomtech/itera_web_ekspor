@@ -3,18 +3,18 @@
 include '../db/connection.php';
 
 $title = $_POST['title'];
-$star  = $_POST['star'];
+$stock  = $_POST['stock'];
 $price  = $_POST['price'];
-$unit  = $_POST['unit'];
+$description  = $_POST['description'];
 $id    = $_POST['id'];
 if(!empty($_FILES['image']['name'])){
     $image = $_FILES['image']['name'];
     $dest = "../../image/";
     move_uploaded_file($_FILES['image']['tmp_name'], $dest.$image);
-    $query = "UPDATE `product` SET `title` = '$title', `star` = '$star', `price` = '$price', `unit` = '$unit', `image` = '$image' WHERE `product`.`id` = $id";
+    $query = "UPDATE `product` SET `title` = '$title', `stock` = '$stock', `description` = '$description', `price` = '$price', `image` = '$image' WHERE `product`.`id` = $id";
     $update = mysqli_query($conn, $query);
 }else{
-    $query = "UPDATE `product` SET `title` = '$title', `star` = '$star', `price` = '$price', `unit` = '$unit' WHERE `product`.`id` = $id";
+    $query = "UPDATE `product` SET `title` = '$title', `stock` = '$stock', `description` = '$description', `price` = '$price' WHERE `product`.`id` = $id";
     $update = mysqli_query($conn, $query);
 }
 

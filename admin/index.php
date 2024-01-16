@@ -3,10 +3,11 @@
   <html lang="en">
 
   <head>
-    <title>Job Dashboard | By Code Info</title>
+    <title>PT. Rollindo Rabbani Makmur</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Font Awesome Cdn Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
   </head>
 
   <body>
@@ -33,27 +34,19 @@
                 <span class="nav-item">About</span>
               </a>
             </li>
-            <li><a href="?page=category">
-                <i class="fas fa-tags"></i>
-                <span class="nav-item">Category</span>
-              </a>
-            </li>
+           
             <li><a href="?page=product">
                 <i class="fas fa-cube"></i>
                 <span class="nav-item">Product</span>
               </a>
             </li>
-            <li><a href="?page=service">
-                <i class="fas fa-question-circle"></i>
-                <span class="nav-item">Serivce</span>
-              </a>
-            </li>
-            <li><a href="#">
+          
+            <li><a href="?page=setting">
                 <i class="fas fa-cog"></i>
                 <span class="nav-item">Setting</span>
               </a>
             </li>
-            <li><a href="#" class="logout">
+            <li><a href="../index.php" class="logout">
                 <i class="fas fa-sign-out-alt"></i>
                 <span class="nav-item">Logout</span>
               </a>
@@ -73,6 +66,9 @@
     </div>
 
   </body>
-
+  
+  <script>
+          CKEDITOR.replace('desc');
+  </script>
   </html>
 </span>

@@ -18,17 +18,18 @@
                     <input type="text" name="title" value="<?php echo $product['title']; ?>">
                     <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
                 </div>
-                <div class="form-group">
-                    <label >Star</label>
-                    <input type="text" name="star" value="<?php echo $product['star']; ?>">
-                </div>
+            
                 <div class="form-group">
                     <label >Price</label>
-                    <textarea name="price"><?php echo $product['price']; ?></textarea>
+                    <input type="text" name="price" value="<?php echo $product['price']; ?>">
                 </div>
                 <div class="form-group">
-                    <label >Unit</label>
-                    <textarea name="unit"><?php echo $product['unit']; ?></textarea>
+                    <label >Stock</label>
+                    <input type="text" name="stock" value="<?php echo $product['stock']; ?>">
+                </div>
+                <div class="form-group">
+                    <label >Description</label>
+                    <textarea name="description""><?php echo $product['description']; ?></textarea>
                 </div>
                 <div class="form-group">
                     <label>Gambar</label>
