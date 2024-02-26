@@ -17,7 +17,7 @@
     <h4 style="margin-bottom: 5px;margin-top: 5px">Price : <?php echo $rowproduct['price']; ?></h4>
     <h5 style="margin-bottom: 20px;">Stock : <?php echo $rowproduct['stock']; ?></h5>
 
-    <a href="https://api.whatsapp.com/send?phone=<?php echo $phone;?>&text= I want to checkout this product <?php echo $rowproduct['title']; ?> \n Quantity : " class="btn">Add To Cart</a>
+    <a href="pages/act/addcart.php?id=<?php echo $rowproduct['id']; ?>" class="btn">Add To Cart</a>
     <a href="https://api.whatsapp.com/send?phone=<?php echo $phone;?>&text= I want to ask about product <?php echo $rowproduct['title']; ?>" class="btn">Contact Us</a>
 </div>
 </section>

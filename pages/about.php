@@ -1,10 +1,4 @@
-<?php
-    include('admin/db/connection.php');
 
-    $sqlabout = "SELECT * FROM about";
-    $resultabout = mysqli_query($conn, $sqlabout);
-    $rowabout = mysqli_fetch_assoc($resultabout);
-?>
 <section class="section__container about__container" id="about">
     <div class="about__image">
         <img src="assets/about.jpg" alt="about" />

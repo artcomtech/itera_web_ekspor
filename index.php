@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +14,13 @@
     <title>PT. Rollindo Rabbani Makmur</title>
   </head>
   <body>
-    <?php
+  <?php
+        include('admin/db/connection.php');
+
+        $sqlabout = "SELECT * FROM about";
+        $resultabout = mysqli_query($conn, $sqlabout);
+        $rowabout = mysqli_fetch_assoc($resultabout);
+
         $header = empty($_GET['page']) || $_GET['page'] == 'beranda' ? 'header' : 'header__page';
 
         include('admin/db/connection.php');
@@ -38,7 +47,16 @@
           <li><a href="?page=product">Product</a></li>
           <li><a href="?page=beranda#contact">Contact</a></li>
         </ul>
-        <a href="https://api.whatsapp.com/send?phone=<?php echo $phone;?>&text=Hello, Welcome to PT. Rollindo Rabbani MakmurIf you have a question, please write here ..."><button class="btn nav__btn">Contact Now</button></a>
+        <!-- <a href="https://api.whatsapp.com/send?phone=<?php echo $phone;?>&text=Hello, Welcome to PT. Rollindo Rabbani MakmurIf you have a question, please write here ..."><button class="btn nav__btn">Contact Now</button></a> -->
+        <?php
+         
+          if(isset($_SESSION['id'])) {
+            echo '<span style="color:#fff"><a href="" style="color:#fff">'.$_SESSION['name'].'</a></span><a href="pages/act/logout.php"><button class="btn nav__btn">Logout</button></a>';
+          }else{
+            echo '<a href="?page=login"><button class="btn nav__btn">Login</button></a>';
+          }
+        ?>
+        
       </nav>
       <?php
         if(empty($_GET['page']) || $_GET['page'] == 'beranda') {
@@ -61,7 +79,7 @@
           <div class="logo">
             <a href="#home"><img src="assets/logo.png" alt="logo" /></a>
           </div>
-          <p class="section__description" style="color:#000000 !important">
+          <p class="section__description" style="color:#FFFFFF !important">
             <?php echo substr($rowabout['desc'],0,100);?>.
           </p>
         </div>

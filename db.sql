@@ -17,7 +17,7 @@
 
 -- Dumping database structure for db_ekspor
 DROP DATABASE IF EXISTS `db_ekspor`;
-CREATE DATABASE IF NOT EXISTS `db_ekspor` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `db_ekspor` /*!40100 DEFAULT CHARACTER SET utf8mb4  */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `db_ekspor`;
 
 -- Dumping structure for table db_ekspor.about
@@ -25,11 +25,11 @@ DROP TABLE IF EXISTS `about`;
 CREATE TABLE IF NOT EXISTS `about` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` tinytext,
-  `desc` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `visi` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `misi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `desc` text CHARACTER SET utf8mb4 ,
+  `visi` varchar(200) CHARACTER SET utf8mb4  DEFAULT NULL,
+  `misi` text CHARACTER SET utf8mb4 ,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ;
 
 -- Dumping data for table db_ekspor.about: ~0 rows (approximately)
 DELETE FROM `about`;
@@ -40,11 +40,11 @@ INSERT INTO `about` (`id`, `title`, `desc`, `visi`, `misi`) VALUES
 DROP TABLE IF EXISTS `category`;
 CREATE TABLE IF NOT EXISTS `category` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `desc` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `image` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `title` varchar(100) CHARACTER SET utf8mb4  DEFAULT NULL,
+  `desc` varchar(200) CHARACTER SET utf8mb4  DEFAULT NULL,
+  `image` varchar(100) CHARACTER SET utf8mb4  DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 ;
 
 -- Dumping data for table db_ekspor.category: ~4 rows (approximately)
 DELETE FROM `category`;
@@ -61,10 +61,10 @@ CREATE TABLE IF NOT EXISTS `product` (
   `title` varchar(200) DEFAULT NULL,
   `price` float DEFAULT NULL,
   `stock` int DEFAULT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `image` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 ,
+  `image` varchar(100) CHARACTER SET utf8mb4  DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 ;
 
 -- Dumping data for table db_ekspor.product: ~2 rows (approximately)
 DELETE FROM `product`;
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `service` (
   `title` varchar(100) DEFAULT NULL,
   `image` tinytext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 ;
 
 -- Dumping data for table db_ekspor.service: ~2 rows (approximately)
 DELETE FROM `service`;
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `email` varchar(100) DEFAULT NULL,
   `address` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ;
 
 -- Dumping data for table db_ekspor.setting: ~0 rows (approximately)
 DELETE FROM `setting`;
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `slider` (
   `title` varchar(50) DEFAULT NULL,
   `desc` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ;
 
 -- Dumping data for table db_ekspor.slider: ~0 rows (approximately)
 DELETE FROM `slider`;
