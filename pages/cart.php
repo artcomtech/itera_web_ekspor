@@ -168,13 +168,14 @@
                        
                 ?>
                 <tr>
-                    <form action="updatecart.php" method="post">
+                    <form action="pages/act/updatecart.php" method="post">
                     <td><?php echo $row['title']; ?></td>
                     <td><input type="number" name="qty" value="<?php echo $row['qty']; ?>" min="1" max="<?php echo $row['stock'];?>"></td>
                     <td><?php echo number_format($row['price'], 0, '.', ','); ?></td>
                     <td><?php echo number_format($row['subtotal'], 0, '.', ','); ?></td>
                     <td>
                         <input type="hidden" name="id" value="<?php echo $row['cart_id']; ?>">
+                        <input type="hidden" name="price" value="<?php echo $row['price']; ?>">
                         <a href="pages/act/deletecart.php?id=<?php echo $row['cart_id']; ?>"><button type="button" class="delete-button">Remove</button></a>
                         <button type="submit" class="edit-button">Update</button>
                     </td>
@@ -188,6 +189,9 @@
                     <td colspan="3">Total</td>
                     <td><?php echo number_format($total, 0, '.', ','); ?></td>
                     <td></td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align: right;"><a href="?page=transaction_form"><button type="button" class="btn">Checkout</button></a></td>
                 </tr>
             </tbody>
         </table>

@@ -11,9 +11,10 @@
 
     $checkcart = "SELECT * FROM cart WHERE product_id = '$id' and customer_id = '$_SESSION[id]'";
     $resultcart = mysqli_query($conn, $checkcart);
+    $datacart = mysqli_fetch_assoc($resultcart);
     if(mysqli_num_rows($resultcart) > 0) {
-        $qty = $resultcart['qty'] + 1;
-        $total = $resultcart['subtotal'] + $row['price'];
+        $qty = $datacart['qty'] + 1;
+        $total = $datacart['subtotal'] + $row['price'];
 
         $update = "UPDATE cart SET qty = '$qty', subtotal = '$total' WHERE product_id = '$id' and customer_id = '$_SESSION[id]'";
         $resultupdate = mysqli_query($conn, $update);

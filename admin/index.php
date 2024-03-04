@@ -34,6 +34,12 @@
                 <span class="nav-item">About</span>
               </a>
             </li>
+
+            <li><a href="?page=customer">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Customer</span>
+              </a>
+            </li>
            
             <li><a href="?page=product">
                 <i class="fas fa-cube"></i>

@@ -105,16 +105,19 @@
         <p class="section__subheader">Transaction</p>
         <h2 class="section__header">List your transaction</h2>
         <ul class="buying-history">
-            <li>
-                <span class="transaction-date">2024-02-26</span>
-                <span class="transaction-description">Product A</span>
-                <span class="transaction-amount">$19.99</span>
-            </li>
-            <li>
-                <span class="transaction-date">2024-02-25</span>
-                <span class="transaction-description">Product B</span>
-                <span class="transaction-amount">$29.99</span>
-            </li>
+            <?php
+                include('admin/db/connection.php');
+                $sql = "SELECT * FROM transaction WHERE customer_id = '$_SESSION[id]'";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<li>
+                            <span class="transaction-date">' . $row['date_create'] . '</span>
+                            <span class="transaction-description">' . $row['name'] . '</span>
+                            <span class="transaction-amount">' . number_format($row['total'], 0, ',', '.'). '</span>
+                        </li>';
+                }
+            ?>
+           
             <!-- Add more transactions as needed -->
         </ul>
     </div>

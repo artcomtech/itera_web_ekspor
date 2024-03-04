@@ -1,13 +1,13 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
 
-require_once "library/PHPMailer.php";
-require_once "library/Exception.php";
-require_once "library/OAuth.php";
-require_once "library/POP3.php";
-require_once "library/SMTP.php";
+	require_once "library/PHPMailer.php";
+	require_once "library/Exception.php";
+	require_once "library/OAuth.php";
+	require_once "library/POP3.php";
+	require_once "library/SMTP.php";
  
 	$mail = new PHPMailer;
  
@@ -37,15 +37,8 @@ require_once "library/SMTP.php";
  
 	$mail->Subject ='TESTING'; //subject
     $mail->Body    ='Okeee'; //isi email
-        $mail->AltBody = "PHP mailer"; //body email (optional)
- 
-	if(!$mail->send()) 
-	{
-	    echo "Mailer Error: " . $mail->ErrorInfo;
-	} 
-	else 
-	{
-	    echo "Message has been sent successfully";
-	}
+    $mail->AltBody = "PHP mailer"; //body email (optional)
+	$mail->send();
+
 
 ?>
